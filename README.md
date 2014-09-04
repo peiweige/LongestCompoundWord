@@ -8,7 +8,7 @@ Question Write a program that reads a file containing a sorted list of words (on
 - 2. The program should then go on to report the 2nd longest word found 
 - 3. Total count of how many of the words in the list can be constructed of other words in the list.
 
-Description to the algorithm 
+Description to the algorithm: 
 - 1. The algorithm first scan the file line by line and create a trie by using the words in the file. Before inserting each word into the trie, it will check if the word has any prefixes. If yes, it will create word-suffix pairs and add them into a queue. 
 - 2. Then, the algorithm will pop a pair from the queue to see if the suffix in the word-suffix pair is a word in the file. If yes, the word is a compound word. Then, it will update the number of compound words, and if it also is longer than the previous compound word, it will update the variables of longestCompoundWord and secondLongestCompoundWord as well. 
 - 3. If the suffix in the word-suffix pair is not a word in the file, it will check if the suffix has any prefixes. If yes, it will create new word-suffix pairs and add them into the queue. Otherwise, it will just discard the pair and pop a new pair from the queue and repeat the process until the queue is empty. 
